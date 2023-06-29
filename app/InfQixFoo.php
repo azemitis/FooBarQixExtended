@@ -21,12 +21,17 @@ class InfQixFoo
     {
         $multipleResult = $this->multiple($number);
         $occurrenceResult = $this->occurrence($number);
+        $sumResult = $this->sumOfDigits($number);
 
         $result = $multipleResult;
         if ($multipleResult !== '' && $occurrenceResult !== '') {
             $result .= '; ';
         }
         $result .= $occurrenceResult;
+
+        if ($sumResult) {
+            $result .= 'Inf';
+        }
 
         if ($result !== '') {
             return $result;
@@ -81,5 +86,13 @@ class InfQixFoo
         } else {
             return '';
         }
+    }
+
+    public function sumOfDigits(int $number): bool
+    {
+        $digits = str_split((string) $number);
+        $sum = array_sum($digits);
+
+        return $sum !== 0 && $sum % 8 === 0;
     }
 }
