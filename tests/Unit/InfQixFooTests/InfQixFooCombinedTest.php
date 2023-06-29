@@ -27,7 +27,7 @@ class InfQixFooCombinedTest extends TestCase
         $this->assertSame('Qix; Foo; Foo; Qix; Inf', $this->infQixFoo->combined(378));
         $this->assertSame('1037; Foo; Qix', $this->infQixFoo->combined(1037));
         $this->assertSame('Foo; Inf; Qix; Foo', $this->infQixFoo->combined(873));
-        $this->assertSame('Inf; Inf', $this->infQixFoo->combined(8));
+        $this->assertSame('Inf; InfInf', $this->infQixFoo->combined(8));
         $this->assertSame('Qix; Qix', $this->infQixFoo->combined(7));
         $this->assertSame('Foo; Foo', $this->infQixFoo->combined(3));
     }
