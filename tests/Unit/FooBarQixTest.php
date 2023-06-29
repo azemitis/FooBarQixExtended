@@ -37,14 +37,22 @@ class FooBarQixTest extends TestCase
     {
         $this->assertSame('Bar', $this->fooBarQix->multiple(5));
         $this->assertSame('Bar', $this->fooBarQix->multiple(10));
-        $this->assertSame('Bar', $this->fooBarQix->multiple(35));
+        $this->assertSame('Bar', $this->fooBarQix->multiple(50));
     }
 
-    public function test_number_is_multiple_of_three_and_five(): void
+    public function test_number_is_multiple_of_seven(): void
+    {
+        $this->assertSame('Qix', $this->fooBarQix->multiple(7));
+        $this->assertSame('Qix', $this->fooBarQix->multiple(14));
+        $this->assertSame('Qix', $this->fooBarQix->multiple(28));
+    }
+
+    public function test_number_is_multiple_of_several_numbers(): void
     {
         $this->assertSame('Foo, Bar', $this->fooBarQix->multiple(15));
-        $this->assertSame('Foo, Bar', $this->fooBarQix->multiple(45));
-        $this->assertSame('Foo, Bar', $this->fooBarQix->multiple(150));
+        $this->assertSame('Foo, Qix', $this->fooBarQix->multiple(21));
+        $this->assertSame('Bar, Qix', $this->fooBarQix->multiple(35));
+        $this->assertSame('Foo, Bar, Qix', $this->fooBarQix->multiple(105));
     }
 
     public function test_number_with_no_multiples_returns_number_as_string(): void
