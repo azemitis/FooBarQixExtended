@@ -3,7 +3,7 @@
 use App\FooBarQix;
 use PHPUnit\Framework\TestCase;
 
-class FooBarQixTest extends TestCase
+class FooBarQixMultiplesTest extends TestCase
 {
     private FooBarQix $fooBarQix;
 
