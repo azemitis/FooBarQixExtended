@@ -79,7 +79,7 @@ class FooBarQix
         if ($result !== '') {
             return $result;
         } else {
-            return (string) $number;
+            return '';
         }
     }
 }

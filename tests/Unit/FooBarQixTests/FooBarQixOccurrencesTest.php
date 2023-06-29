@@ -52,11 +52,4 @@ class FooBarQixOccurrencesTest extends TestCase
         $this->assertSame('Qix, Bar, Foo', $this->fooBarQix->occurrence(753));
         $this->assertSame('Qix, Foo, Bar', $this->fooBarQix->occurrence(735));
     }
-
-    public function test_number_with_no_occurrences_returns_number_as_string(): void
-    {
-        $this->assertSame('2', $this->fooBarQix->occurrence(2));
-        $this->assertSame('4', $this->fooBarQix->occurrence(4));
-        $this->assertSame('22', $this->fooBarQix->occurrence(22));
-    }
 }
