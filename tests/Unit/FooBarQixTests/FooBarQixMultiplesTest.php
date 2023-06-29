@@ -1,6 +1,9 @@
 <?php declare(strict_types=1);
 
+namespace tests\Unit\FooBarQixTests;
+
 use App\FooBarQix;
+use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
 class FooBarQixMultiplesTest extends TestCase
